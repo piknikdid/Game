@@ -1,0 +1,12 @@
+<form  class="well" (submit)= "addUser($event)" #todoForm='ngForm'>
+
+    <div class="form-group">
+      <input type="text" [(ngModel)]="email" placeholder ='Email' name="email">
+      <br>
+      <input type="password" [(ngModel)]="password" placeholder="Password" name='password'>
+      <br>
+      <button type='submit' routerLink="/heroes" [disabled]='todoForm.form.pristine' class='btn btn-success'>Ok</button>
+
+    </div>
+    <router-outlet> </router-outlet>
+</form>

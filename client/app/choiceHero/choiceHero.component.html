@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Holla mi amigo <b>time to choice Hero</b></h1>
+  <ul *ngFor = 'let hero of heroes'>
+    <li><img (mouseover)="mouseover=true" (mouseout)="mouseover=false" src="{{hero.images}}" id = 'imageHero'>
+      <br>
+      <div *ngIf="mouseover"><h1>{{hero.name}}</h1></div></li>
+  </ul>
+
+</div>
